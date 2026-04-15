@@ -35,6 +35,8 @@ Arduino_LM35_TempMonitor/
 - **Nguyễn Trung Tín** (Chủ repo)
 - **Nguyễn Trung Hậu** (Collaborator)
 ```
+```
 ## 👤 Tác giả
 * **Nguyễn Trung Hậu** - Sinh viên ngành IoT tại PTIT.
 * Trang cá nhân: [https://trunhout.github.io](https://trunhout.github.io)
+```
