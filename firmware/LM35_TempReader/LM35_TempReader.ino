@@ -3,8 +3,8 @@
 * Mon: Mang Cam Bien - Tuan 03
 */
 
-int adcValue;
-float nhietDo;
+int adcValues[2]; 
+float nhietDo[2]; 
 
 void setup() {
   Serial.begin(9600);
@@ -12,8 +12,18 @@ void setup() {
 }
 
 void loop() {
-  adcValue = analogRead(A0);
-  nhietDo = (adcValue * 500.0) / 1023.0;
-  Serial.println(nhietDo, 1);
+  // Doc 2 kenh A0 va A1
+  adcValues[0] = analogRead(A0);
+  adcValues[1] = analogRead(A1);
+  
+  // Tinh nhiet do
+  nhietDo[0] = (adcValues[0] * 500.0) / 1023.0;
+  nhietDo[1] = (adcValues[1] * 500.0) / 1023.0;
+  
+  // In ra dinh dang CSV
+  Serial.print(nhietDo[0], 1);
+  Serial.print(",");
+  Serial.println(nhietDo[1], 1);
+  
   delay(1000);
 }
